@@ -1,7 +1,7 @@
 // general
-@import "libs/normalize.scss";
-@import "fonts.scss";
-@import "ds-system/ds.scss";
-@import "visually-hidden.scss";
-@import "scaffolding.scss";
-@import "mixins/mixins";
+@use "libs/normalize.scss";
+@use "fonts.scss";
+@use "ds-system/ds.scss";
+@use "visually-hidden.scss";
+@use "scaffolding.scss";
+@use "mixins/mixins";
