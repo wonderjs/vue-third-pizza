@@ -3,20 +3,53 @@
     <button
       type="button"
       class="counter__button counter__button--minus"
-      disabled
+      :disabled="value === 0"
+      @click="decrementValue()"
     >
       <span class="visually-hidden">Меньше</span>
     </button>
-    <input type="text" name="counter" class="counter__input" value="0" />
-    <button type="button" class="counter__button counter__button--plus">
+    <input
+      type="text"
+      name="counter"
+      class="counter__input"
+      :value="value"
+      @input="inputValue($event.target.value)"
+    />
+    <button
+      type="button"
+      class="counter__button counter__button--plus"
+      :disabled="value === maxValue"
+      @click="incrementValue()"
+    >
       <span class="visually-hidden">Больше</span>
     </button>
   </div>
 </template>
 
+<script setup>
+const props = defineProps({
+  value: {
+    type: Number,
+    default: 0,
+  },
+  maxValue: {
+    type: Number,
+    default: 0,
+  },
+});
+
+const emit = defineEmits(['update']);
+
+const decrementValue = () => emit('update', props.value - 1);
+const incrementValue = () => emit('update', props.value + 1);
+
+const inputValue = (count) =>
+  emit('update', Math.min(props.maxValue, Number(count)));
+</script>
+
 <style lang="scss" scoped>
-@use 'ds';
-@use 'mixins';
+@use '@/assets/scss/ds-system/ds.scss';
+@use '@/assets/scss/mixins/mixins';
 
 .counter {
   display: flex;
