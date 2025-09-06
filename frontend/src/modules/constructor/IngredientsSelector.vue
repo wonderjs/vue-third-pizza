@@ -7,9 +7,14 @@
         :key="ingredientType.id"
         class="ingredients__item"
       >
-        <span class="filling" :class="`filling--${ingredientType.value}`">{{
-          ingredientType.name
-        }}</span>
+        <app-drag
+          :data-transfer="ingredientType"
+          :draggable="getValue(ingredientType.value) < MAX_INGREDIENT_COUNT"
+        >
+          <span class="filling" :class="`filling--${ingredientType.value}`">{{
+            ingredientType.name
+          }}</span>
+        </app-drag>
         <app-counter
           class="ingredients__counter"
           :value="getValue(ingredientType.value)"
@@ -23,6 +28,7 @@
 <script setup>
 import { toRef } from 'vue';
 import AppCounter from '@/common/components/AppCounter.vue';
+import AppDrag from '@/common/components/AppDrag.vue';
 import { MAX_INGREDIENT_COUNT } from '@/common/constants';
 
 const props = defineProps({
