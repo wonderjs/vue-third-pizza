@@ -1,9 +1,9 @@
 <template>
-  <div class="counter counter--orange">
+  <div class="counter counter--orange" :class="{ 'counter--orange': accent }">
     <button
       type="button"
       class="counter__button counter__button--minus"
-      :disabled="value === 0"
+      :disabled="value === min"
       @click="decrementValue()"
     >
       <span class="visually-hidden">Меньше</span>
@@ -18,7 +18,7 @@
     <button
       type="button"
       class="counter__button counter__button--plus"
-      :disabled="value === maxValue"
+      :disabled="value === max"
       @click="incrementValue()"
     >
       <span class="visually-hidden">Больше</span>
@@ -32,7 +32,15 @@ const props = defineProps({
     type: Number,
     default: 0,
   },
-  maxValue: {
+  accent: {
+    type: Boolean,
+    default: false,
+  },
+  min: {
+    type: Number,
+    default: 100,
+  },
+  max: {
     type: Number,
     default: 0,
   },
@@ -44,7 +52,7 @@ const decrementValue = () => emit('update', props.value - 1);
 const incrementValue = () => emit('update', props.value + 1);
 
 const inputValue = (count) =>
-  emit('update', Math.min(props.maxValue, Number(count)));
+  emit('update', Math.min(props.max, Number(count)));
 </script>
 
 <style lang="scss" scoped>
