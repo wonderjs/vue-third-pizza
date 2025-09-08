@@ -242,8 +242,8 @@ const getImage = (image) => {
 </script>
 
 <style lang="scss">
-@use '@/assets/scss/ds-system/ds.scss';
-@use '@/assets/scss/mixins/mixins.scss';
+@use '@/assets/scss/ds-system/ds';
+@use '@/assets/scss/mixins/mixins';
 
 .layout-form {
   display: flex;
