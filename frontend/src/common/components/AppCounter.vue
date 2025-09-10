@@ -1,5 +1,5 @@
 <template>
-  <div class="counter counter--orange" :class="{ 'counter--orange': accent }">
+  <div class="counter" :class="{ 'counter--orange': accent }">
     <button
       type="button"
       class="counter__button counter__button--minus"
@@ -51,8 +51,9 @@ const emit = defineEmits(['update']);
 const decrementValue = () => emit('update', props.value - 1);
 const incrementValue = () => emit('update', props.value + 1);
 
-const inputValue = (count) =>
+const inputValue = (count) => {
   emit('update', Math.min(props.max, Number(count)));
+};
 </script>
 
 <style lang="scss" scoped>

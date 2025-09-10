@@ -10,9 +10,9 @@
         class="visually-hidden"
         type="radio"
         name="dough"
-        :value="doughType.value"
-        :checked="doughType.value === modelValue"
-        @input="emit('update:modelValue', doughType.value)"
+        :value="doughType.id"
+        :checked="doughType.id === modelValue"
+        @input="emit('update:modelValue', doughType.id)"
       />
       <b>{{ doughType.name }}</b>
       <span>{{ doughType.description }}</span>
@@ -25,8 +25,8 @@ import AppSheet from '@/common/components/AppSheet.vue';
 
 defineProps({
   modelValue: {
-    type: String,
-    default: '',
+    type: Number,
+    required: true,
   },
   items: {
     type: Array,

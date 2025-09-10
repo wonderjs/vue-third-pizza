@@ -9,10 +9,10 @@
       <input
         type="radio"
         name="diameter"
-        :value="sizeType.value"
-        :checked="sizeType.value === modelValue"
+        :value="sizeType.id"
+        :checked="sizeType.id === modelValue"
         class="visually-hidden"
-        @input="emit('update:modelValue', sizeType.value)"
+        @input="emit('update:modelValue', sizeType.id)"
       />
       <span>{{ sizeType.name }}</span>
     </label>
@@ -24,8 +24,8 @@ import AppSheet from '@/common/components/AppSheet.vue';
 
 defineProps({
   modelValue: {
-    type: String,
-    default: '',
+    type: Number,
+    required: true,
   },
   items: {
     type: Array,
