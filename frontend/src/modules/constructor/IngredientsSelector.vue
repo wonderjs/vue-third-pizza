@@ -18,7 +18,6 @@
         <app-counter
           class="ingredients__counter"
           :value="values[ingredientType.id]"
-          :min="0"
           :max="MAX_INGREDIENT_COUNT"
           @update="inputValue(ingredientType.id, $event)"
         />
