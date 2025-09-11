@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { DATA_TRANSFER_PAYLOAD } from '@/common/constants';
 
 const emit = defineEmits(['drop']);

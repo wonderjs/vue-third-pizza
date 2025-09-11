@@ -1,7 +1,8 @@
 import { useDataStore } from '@/stores/data';
 import { ingredientsQuantity } from '@/common/helpers/ingredients-quantity';
+import { Pizza } from '@/common/types/pizza';
 
-export const pizzaPrice = (pizza) => {
+export const pizzaPrice = (pizza: Pizza) => {
   const data = useDataStore();
   const ingredients = ingredientsQuantity(pizza);
 

@@ -177,7 +177,7 @@
   </form>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import AppCounter from '@/common/components/AppCounter.vue';

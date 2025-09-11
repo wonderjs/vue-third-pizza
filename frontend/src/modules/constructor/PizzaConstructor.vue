@@ -17,7 +17,7 @@
     </div>
   </app-drop>
 </template>
-<script setup>
+<script lang="ts" setup>
 import AppDrop from '@/common/components/AppDrop.vue';
 
 const TWO_INGREDIENTS = 2;

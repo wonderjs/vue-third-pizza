@@ -4,7 +4,7 @@
   </component>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { shallowRef, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import AppLayoutDefault from '@/layouts/DefaultLayout.vue';

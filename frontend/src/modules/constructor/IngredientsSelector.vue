@@ -25,7 +25,7 @@
     </ul>
   </div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import { toRef } from 'vue';
 import AppCounter from '@/common/components/AppCounter.vue';
 import AppDrag from '@/common/components/AppDrag.vue';

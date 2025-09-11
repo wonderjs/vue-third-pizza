@@ -1,4 +1,6 @@
-export default {
+import { IngredientId, IngredientValue } from '@/common/types/ingredients';
+
+const ingredients: Record<IngredientId, IngredientValue> = {
   1: 'mushrooms',
   2: 'cheddar',
   3: 'salami',
@@ -15,3 +17,5 @@ export default {
   14: 'parmesan',
   15: 'blue_cheese',
 };
+
+export default ingredients;

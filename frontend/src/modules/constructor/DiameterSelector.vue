@@ -19,7 +19,7 @@
   </app-sheet>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import AppSheet from '@/common/components/AppSheet.vue';
 
 defineProps({

@@ -103,10 +103,7 @@
   a {
     display: block;
 
-    padding-top: 14px;
-    padding-right: 20px;
-    padding-bottom: 14px;
-    padding-left: 20px;
+    padding: 14px 20px;
 
     transition: 0.3s;
 

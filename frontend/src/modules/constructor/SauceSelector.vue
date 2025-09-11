@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
   modelValue: {
     type: Number,

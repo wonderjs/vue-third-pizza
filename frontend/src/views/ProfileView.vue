@@ -123,7 +123,7 @@
   </div>
 </template>
 
-<script setup></script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped>
 @use '@/assets/scss/ds-system/ds';

@@ -13,7 +13,7 @@
   </app-popup>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import AppPopup from '@/common/components/popup/AppPopup.vue';
 import AppPopupTitle from '@/common/components/popup/AppPopupTitle.vue';
 import AppPopupButton from '@/common/components/popup/AppPopupButton.vue';

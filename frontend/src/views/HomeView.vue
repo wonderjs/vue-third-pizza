@@ -55,7 +55,7 @@
   </main>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import DoughSelector from '@/modules/constructor/DoughSelector.vue';
